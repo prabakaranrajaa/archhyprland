@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Get disk usage info
+usage=$(df -h / | awk 'NR==2 {print $5 " used on " $6}')
+
+# Get disk usage info
+usage1=$(df -h /home | awk 'NR==2 {print $5 " used on " $6}')
+
+# Send notification
+notify-send "Disk Usage"  "$usage"
+
+# Send notification
+notify-send "Disk Usage"  "$usage1"

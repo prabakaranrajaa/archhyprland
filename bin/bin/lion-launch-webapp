@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Set Brave as the browser
+# browser_exec="/usr/bin/brave"
+
+
+browser_exec="/usr/bin/zen-browser"
+
+if [[ ! -x "$browser_exec" ]]; then
+    echo "Zen not found, falling back to Chromium."
+    browser_exec="/usr/bin/chromium"
+    exec setsid uwsm app -- "$browser_exec" --app="$1" "${@:2}"
+else
+    # Zen doesn’t support --app, use kiosk instead
+    exec setsid uwsm app -- "$browser_exec" --kiosk "$1" "${@:2}"
+fi
+
+

@@ -1,0 +1,53 @@
+# =========================
+# Window
+# =========================
+width = 52%
+height = 36%
+anchor = center
+padding = 18
+border-width = 2
+outline-width = 0
+corner-radius = 20
+
+# =========================
+# Font
+# =========================
+font = FiraCode Nerd Font
+font-size = 17
+line-height = 1.4
+
+# =========================
+# Results
+# =========================
+num-results = 7
+result-spacing = 8
+
+# =========================
+# Prompt
+# =========================
+prompt-text = "󰣇  "
+prompt-color = #fb40c9ff
+prompt-padding = 6
+
+# =========================
+# Colors
+# =========================
+background-color = #11111be6   # smooth transparency
+text-color = #cdd6f4
+selection-color = #1e66f5ff
+selection-text-color = #ffffff
+border-color = #ef0e4eff
+cursor-color = #f5c2e7
+
+# =========================
+# Matching Highlight
+# =========================
+highlight-matching = true
+match-color = #f9e2af
+
+# =========================
+# Behavior (Quality of Life)
+# =========================
+fuzzy-match = true
+case-sensitive = false
+hide-cursor = false

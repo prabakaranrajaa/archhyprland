@@ -1,0 +1,228 @@
+sudo pacman -S zsh-syntax-highlighting zsh-autosuggestions
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /usr/share/zsh/powerlevel10k/powerlevel10k.zsh-theme
+stow gtk-3.0
+stow gtk-4.0
+nvim
+sudo pacman -S eza fzf
+stow fastfetch
+stow mako
+stow matugen
+stow qutebrowser
+stow cava
+stow rmpc
+stow tmux
+stow swayosd
+stow tofi
+stow wlogout
+yay -S tofi
+sudo pacman -S --needed pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber
+systemctl --user enable pipewire.service pipewire-pulse.service wireplumber.service systemctl --user start pipewire.service pipewire-pulse.service wireplumber.service
+systemctl --user status pipewire systemctl --user status pipewire-pulse
+pactl info
+paplay /usr/share/sounds/freedesktop/stereo/network-connectivity-established.oga
+paplay /usr/share/sounds/freedesktop/stereo/suspend-error.oga
+pactl list sink-inputs
+wpctl status
+wpctl set-default 38
+wpctl set-default 60
+pactl set-default-sink alsa_output.pci-0000_00_03.0.hdmi-stereo
+sudo pacman -S papirus-icon-theme
+sudo pacman -S xfce4-settings
+ls /usr/share/themes/
+sudo pacman -S btop
+xfsettingsd &
+sudo pacman -S lxappearance
+yay -S materia-theme
+xfce4-appearance-settings
+lxappearance
+n praba1.txt
+git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+sudo pacman -S bat
+cat praba1.txt
+mkdir -p ~/.local/share/gnupg chmod 700 ~/.local/share/gnupg gpg --list-keys
+gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys F4FDB18A9937358364B276E9E25D679AF73C6D2F
+yay -S wlogout
+cd ~/.config/hypr/scripts/
+lt
+sudo pacman -S imagemagick
+./wallpaper_selector.sh
+yay -S swayosd
+sudo pacman -S ttf-jetbrains-mono-nerd
+sudo pacman -S matugen
+sudo pacman -R lxappearance
+sudo pacman -S android-tools android-udev gvfs-mtp
+sudo udevadm control --reload-rules sudo systemctl restart systemd-udevd
+sudo pacman -S android-tools android-udev gvfs-mtp --needed
+yay -S pipes.sh
+pipes.sh
+sudo pacman -S python-adblock
+sudo pacman -S rmpc --needed
+sudo pacman -S mpd mpc --needed
+sudo pacman -S superfile --needed
+y
+yay -S --needed jq fd ripgrep fzf zoxide resvg xclip wl-clipboard chafa
+sudo pacman -S cmatrix
+brave --disable-gpu --ozone-platform=wayland
+sudo pacman -Syu
+brave --disable-gpu --disable-features=UseOzonePlatform
+sudo pacman -S mesa libva-intel-driver intel-media-driver
+sudo pacman -S gnome-keyring libsecret
+sudo pacman -S polkit-gnome
+sudo pacman -S iwd --needed
+sudo pacman -S wiremix --needed
+wiremix
+sudo pacman -S hyprpicker wl-clipboard xdg-desktop-portal-hyprland --needed
+sudo pacman -S grim slurp wl-clipboard --needed
+sudo pacman -S hyprlock
+tmux new -s One
+adb devices
+hyprctl monitors
+code
+fc-list
+sudo pacman -Ss fira-code
+sudo pacman -Ss fira
+sudo pacman -Ss ttf-firacode-nerd
+sudo pacman -S ttf-firacode-nerd
+fc-list | grep "FiraCode"
+sudo pacman -S xdg-utils
+mkdir ~/bin
+touch ~/bin/launch-webapp.sh
+chmod +x ~/bin/launch-webapp.sh
+sudo cat /usr/share/applications/brave-browser.desktop
+which brave
+nano ~/bin/launch-webapp.sh
+~/bin/launch-webapp.sh https://chat.openai.com
+nano ~/bin/lion-launch-or-focus
+nano ~/bin/lion-launch-or-focus-webapp
+chmod +x ~/bin/lion-launch-or-focus chmod +x ~/bin/lion-launch-or-focus-webapp
+ls -l ~/bin/
+~/bin/lion-launch-or-focus-webapp YouTube "https://youtube.com/"
+yay -S zen-browser-bin
+hyprctl version
+display
+xrandr
+pacman -Q
+xfce4-display-settings: 1767283954:0;which zen-browser
+cd bin/
+./lion-launch-webapp https://chat.openai.com --window-size=1200,800
+/usr/bin/zen-browser --kiosk https://chat.openai.com
+hyprctl clients
+lsblk
+lsblk -f
+~
+cd archhyprdotfiles/
+stow kitty
+cd ~/.config/nvim
+n .
+sudo pacman -S mpv
+touch ~/.config/mpv/mpv.conf
+mpv ~/Videos/Oorum\ Blood\ ｃ�\ Dude\ ｃ�\ Pradeep\ Ranganathan,\ Mamitha\ ｃ�\ Sai\ Abhyankkarｃ�\ Keerthiswaranｃ�Paal\ Dabbaｃ�\ Mythri.mp4
+alias
+yay -Ss tor
+yay -Ss tor-browser
+yay -Ss tor-browser-alpha-bin
+yay -S tor-browser-bin
+tor-browser
+yay -S brave-bin
+yay -S visual-studio-code-bin
+sudo pacman -S qbittorrent
+mpv Oorum\ Blood\ ｃ�\ Dude\ ｃ�\ Pradeep\ Ranganathan,\ Mamitha\ ｃ�\ Sai\ Abhyankkarｃ�\ Keerthiswaranｃ�Paal\ Dabbaｃ�\ Mythri.mp4
+yay -Suyy
+sudo pacman -Suyy
+poweroff
+vnstat --iflist
+sudo systemctl enable vnstat
+sudo systemctl restart vnstat
+sudo timedatectl set-ntp true
+sudo hwclock --systohc
+ip addr
+timedatectl status
+systemctl status vnstat.service
+sudo pacman -S vnstat
+sudo systemctl enable vnstat.service --now
+ip route get 8.8.8.8
+timedatectl
+sudo systemctl stop vnstat
+sudo rm -rf /var/lib/vnstat/*
+sudo systemctl start vnstat
+sudo nano /etc/vnstat.conf
+sudo systemctl restart vnstat.service
+vnstat -l
+vnstat
+sudo systemctl status vnstat.service
+sudo pacman -S asciiquarium
+cd /usr/src
+sudo pacman -Qe
+sudo pacman -Q
+pacman -Qe | awk '{print $1}'
+pacman -Qe | awk '{print $1}' > pkglist.txt
+sudo pacman -S hyprpicker
+ip add
+sudo pacman -S openssh
+sudo systemctl enable sshd sudo systemctl start sshd
+cd Videos
+mpv Oorum\ Blood\ ｃ�\ Dude\ ｃ�\ Pradeep\ Ranganathan,\ Mamitha\ ｃ�\ Sai\ Abhyankkarｃ�\ Keerthiswaranｃ�Paal\ Dabbaｃ�\ Mythri.mp4 &
+systemctl status sshd
+uname
+pipes.sh -t 3
+uname -a
+ps aux
+ps a
+whoami
+who
+btop
+cmatrix
+asciiquarium
+sudo pacman -S openvpn
+sudo pacman -Syyu
+ps
+spf
+yazi
+sudo systemctl --full | tail
+sudo systemctl --full
+sudo systemctl status sshd
+sudo journalctl -u fstrim
+sudo journalctl -u sshd
+ls -lahi /
+ls -rlahi /
+df -ih
+cat /etc/host.conf
+cat /etc/hostname
+cat /etc/hosts
+sudo nano /etc/hosts
+ip a
+hostnamectl
+which ssh
+ls -l ~/.ssh
+cat ~/.ssh/authorized_keys
+ls
+cd ..
+cat pkglist.txt
+find . -name "*.txt"
+find . -name "*.txt" | grep pkg
+find . -name "*.txt" | grep pkglist
+find . -mtime -1
+find . -mtime -1 | grep pkglist
+id
+yay -S opencode
+opencode
+yay -S opencode --needed
+sudo lsblk
+top
+ls -la ~/.ssh
+ssh-keygen -t ed25519 -C "prabakaranraja@gmail.com"
+cat ~/.ssh/id_ed25519.pub
+pwd
+mkdir ~/archhyprland
+cd archhyprland
+git config --global user.email "prabakaranraja@gmail.com"
+git config --global user.name "prabakaranrajaa"
+ls -la
+echo "# archhyprland" > README.md
+echo "# archhyprland" >> README.md 
+git init git add README.md 
+git commit -m "first commit" 
+git branch -M main 
+git remote add origin git@github.com:prabakaranrajaa/archhyprland.git 
+git push -u origin main
+git clone git@github.com:prabakaranrajaa/archhyprland.git

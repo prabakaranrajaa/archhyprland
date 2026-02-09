@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if (($# == 0)); then
+  echo "Usage: lion-launch-or-focus-webapp [window-pattern] [url]"
+  exit 1
+fi
+
+exec ~/bin/lion-launch-or-focus "$1" "~/bin/lion-launch-webapp '$2'"
+

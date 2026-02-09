@@ -1,0 +1,321 @@
+sudo pacman -S zsh-syntax-highlighting
+sudo pacman -S zsh-autosuggestions
+sudo pacman -S zsh-theme-powerlevel10k
+sudo pacman -S eza 
+sudo pacman -S bat
+sudo pacman -S lolcat
+sudo pacman -S cmatrix
+sudo pacman -S zoxide 
+y
+mat
+tmux neww "cmatrix"
+p10k configure
+pacman -Qi zsh
+type pacman
+rm -f ~/.zcompdump*
+exec zsh
+fastfeach
+uptime
+sudo pacman -S vlc
+vlc
+echo "pcspkr" | sudo tee /etc/modules-load.d/pcspkr.conf
+sudo pacman -S beep
+sudo chmod u+s /usr/bin/beep
+sudo nano /etc/udev/rules.d/99-ac-beep.rules
+sudo udevadm control --reload-rules sudo udevadm trigger
+where fzf
+lsmod | grep pcspkr
+echo ${XDG_CACHE_HOME:-$HOME/.cache}
+echo eval "$(zoxide init zsh)"
+echo eval "$(alacritty init zsh)"
+ls -lahr
+vim /etc/zsh/zprofile
+cat /usr/share/doc/zstd/zstd_manual.html
+.config
+/etc
+/bin
+/home/karan
+/home
+nvim ~/.config/alacritty/alacritty.toml
+cmatrix -help
+cmatrix -r
+cmatrix -o
+cmatrix -C red
+cmatrix -C blue
+cmatrix -C yellow
+cmatrix -C black
+cmatrix -C white
+cmatrix -C green
+cmatrix -V
+cmatrix -x
+cmatrix -a
+cmatrix -n
+cmatrix -l
+cmatrix -f
+cmatrix -h
+cmatrix -c
+cmatrix -s
+alias
+tmux ls
+nvim ~/.config/nvim/init.lua
+cmatrix -u 10
+cmatrix
+qtile cmd-obj -o cmd -f shutdown
+tobash
+top
+pcmanfm &
+cmatrix -m
+sudo pacman -S dunst
+dunst &
+nvim ~/.config/zsh/.zshrc
+Videos
+lt
+ll
+Downloads
+l
+df
+du
+ls -lah
+tree
+history
+cat .bashrc
+sudo pacman -S nushell
+qutebrowser &
+infocmp tmux-256color
+ls
+spf
+ps
+notify-send "Test Notification" "This is a message from Dunst"
+notify-send "Test Notification" "This is a message from Dunstiqjfj"
+dunst
+pgrep dunst || dunst &
+killall dunst
+notify-send "Test Notification" "This is a message from Dunstiqj"
+mkdir ~/.local/bin
+ls -la ~/.local/bin
+chmod +x ~/.local/bin/notify-disk
+nano ~/.local/bin/notify-disk
+notify-disk
+echo $PATH
+sudo pacman -S python-pipx
+pipx ensurepath
+pip --version
+pip3 --version
+yay -S mpd
+yay -S mpc
+sudo systemctl enable --now mpd
+ps aux | grep mpd
+ps -ef | grep mpd
+mkdir -p ~/.mpd/playlists mkdir -p ~/.cache/mpd touch ~/.cache/mpd/db
+mpd
+mpc update
+systemctl --user restart mpd systemctl --user restart pipewire
+systemctl --user status pipewire
+systemctl --user status pipewire-pulse
+systemctl --user restart mpd mpc update mpc listall mpc play
+journalctl --user -xeu mpd
+mpc listall
+sudo pacman -S pipewire-pulse
+systemctl --user daemon-reexec systemctl --user restart pipewire pipewire-pulse
+pactl info
+pactl set-default-sink alsa_output.pci-0000_00_1b.0.analog-stereo
+systemctl --user daemon-reexec systemctl --user restart mpd
+mkdir -p /home/karan/.mpd/playlists mkdir -p /home/karan/.cache/mpd touch /home/karan/.cache/mpd/{db,log,state,pid}
+systemctl --user daemon-reexec systemctl --user restart pipewire pipewire-pulse systemctl --user restart mpd
+mpc update mpc listall mpc play
+yay -S rmpc-git
+pactl list sink-inputs
+pactl set-default-sink alsa_output.pci-0000_00_03.0.hdmi-stereo
+systemctl --user restart mpd mpc play
+pactl set-sink-mute alsa_output.pci-0000_00_03.0.hdmi-stereo 0 pactl set-sink-volume alsa_output.pci-0000_00_03.0.hdmi-stereo 100%
+ps -ef | grep dunst
+pactl list short sinks
+sudo killall mpd
+pkill dunst && dunst &
+journalctl --user -xeu mpd.service
+rm -f ~/.config/mpd/pid ~/.config/mpd/socket
+sudo pacman -S lsof
+sudo lsof -i :6600
+nano ~/.config/mpd/mpd.conf
+mpc play
+nvim ~/.config/rmpc/config.ron
+mkdir -p /home/karan/.cache/mpd
+chown -R karan:karan /home/karan/.cache/mpd
+ls -ld /home/karan/.cache/mpd
+systemctl --user restart mpd
+ls /home/karan/.cache/mpd/db
+mpc
+mpc -p 6601
+mpc -p 6601 volume +10
+mpc -p 6601 clear mpc -p 6601 add "ooru blood.mp3" mpc -p 6601 play
+rmpc status
+sudo pacman -S gvfs gvfs-mtp mtpfs android-udev
+lsusb sudo pacman -S usbutils
+lsusb
+mkdir -p ~/phone
+yay -S jmtpfs
+mkdir -p ~/phone jmtpfs ~/phone
+gio mount -l
+sudo pcmanfm &
+sudo pcmanfm
+systemctl --user enable mpd
+sudo loginctl enable-linger $USER
+mpd --no-daemon --verbose
+mkdir -p ~/.config/mpd/playlists mkdir -p ~/.cache/mpd touch ~/.cache/mpd/db
+chown -R $USER:$USER ~/.config/mpd ~/.cache/mpd
+systemctl --user start mpd
+systemctl --user status mpd
+journalctl --user -u mpd
+mpc -p 6601 update
+mpc -p 6601 listall
+mpc -p 6601 play
+sudo pacman -S ffmpeg libdvdcss x264
+sudo pacman -S aom libvpx x265 opus faac flac
+xinput list
+qtile cmd-obj -o cmd -f restart
+sudo pacman -S picom
+mkdir -p ~/.config/picom
+sudo pacman -S feh
+feh --bg-scale ~/Pictures/Wallpapers/kill.jpeg &
+alacritty &
+mkdir -p ~/Pictures/Wallpapers
+nano ~/.config/picom/picom.conf
+nvim ~/.config/picom/picom.conf
+sudo pacman -S dmenu
+nvim ~/.config/qtile/config.py
+sudo pacman -R dmenu
+rmpc
+picom --config ~/.config/picom/picom.conf &
+picom
+chmod +x ~/.config/qtile/autostart.sh
+~/.config/qtile/autostart.sh
+ps aux | grep picom
+ls -la ~/.config/qtile/autostart.sh
+killall picom
+picom &
+sudo pacman -S lxappearance
+yay -S dracula-gtk-theme
+sudo nano /usr/share/themes/Dracula/gtk-3.0/gtk.css
+yay -S arc-gtk-theme
+yay -R arc-gtk-theme
+yay -R dracula-gtk-theme
+lxappearance
+sudo pacman -S vlc-plugins-all
+xinput
+xinput set-button-map 15 3 2 1
+yay -S neofeatch
+export PS1=" \[\e[1;32m\] \u@\h:\w\$ \[\e[0m\] "
+kitty &
+yay -S psutil
+ip a
+uname -r
+uname --help
+uname -a
+sudo pacman -S vnstat
+vnstat -d
+sudo systemctl enable vnstat sudo systemctl start vnstat
+vnstat --iflist
+vnstat -i wlan0
+sudo vnstat --help
+chmod +x ~/.config/qtile/net_usage.py
+sudo systemctl status vnstat
+vnstat -d -i wlan0
+python3 ~/.config/qtile/net_usage.py
+pacman -Qdtq
+sudo pacman -Rns $(pacman -Qdtq)
+pacman -Qet
+sudo pacman -Sc
+sudo pacman -Scc
+sudo pacman -S pacman-contrib
+paccache -r
+v /etc/vnstat.conf
+sudo nvim /etc/vnstat.conf
+sudo nano /etc/vnstat.conf
+vnstat -l -i wlan0
+sudo gedit /etc/vnstat.conf
+sudo systemctl restart vnstat
+xprop | grep WM_CLASS
+rofi
+rofi -show
+rofi -no-config -dump-theme
+rofi-theme-selector
+vnstat
+rmpc play
+rmpc stop
+sudo pacman -S copyq
+ps aux | grep copyq
+copyq
+sudo pacman -S volumeicon
+sudo pacman -S obs-studio
+obs
+nvim --version
+btop &
+sudo pacman -S xclip
+sudo pacman -Su
+nvim
+git config --global user.name "prabakaranrajaa" git config --global user.email "prabakaranraja@gmail.com"
+git config --global core.editor nvim
+ssh-keygen -t ed25519 -C "prabakaranraja@gmail.com"
+eval "$(ssh-agent -s)" ssh-add ~/.ssh/id_ed25519
+cat ~/.ssh/id_ed25519.pub
+git clone https://github.com/prabakaranrajaa/archdotfiles.git
+ls -l
+git remote set-url origin git@github.com:prabakaranrajaa/archdotfiles.git
+git remote -v
+cd archdotfiles
+mkdir -p ~/alacritty/.config/
+mkdir -p ,/alacritty/.config/
+mkdir -p ./alacritty/.config/
+rm -r ,
+mkdir -p ./dunst/.config/
+mkdir -p ./kitty/.config/
+mkdir -p ./picom/.config/
+mkdir -p ./qtile/.config/
+mkdir -p ./qutebrowser/.config/
+mkdir -p ./tmux/.config/
+mkdir -p ./zsh/.config/
+mkdir -p ./bash/
+tree .
+lt .
+tree -h
+mkdir -p ./nvim/.config/
+git add .
+git status
+git commit -m "Initial commit"
+git push -u origin main
+git clone git@github.com:prabakaranrajaa/archqtiledotfiles.git
+ls -la
+xrandr --output eDp-1 --same-as HDMI-1 --rotate right
+xrandr --output eDP-1 --same-as HDMI-1 --rotate right
+xrandr --output eDP-1 --same-as HDMI-1 --rotate left
+xrandr --output eDP-1 --same-as HDMI-1 --rotate normal
+xrandr --output eDP-1 --same-as HDMI-1 --rotate left &
+xrandr --query
+xrandr --output HDMI-1 --primary
+xrandr -o left
+xrandr -o normal
+sudo pacman -S falkon
+sudo pacman -Suyy
+xrandr -o right
+poweroff
+fastfetch
+sudo pacman -S zellij
+zellij
+cd ~/.config/tmux
+cd ~/.config/qtile/
+cd ~/.config/qtile
+cd qtile
+pwd
+cd tmux
+btop
+nu
+tmux new -t OnetoTwos
+tmux
+tmux new -t OnetoTwoandthreefour
+tmux new -t OnetoTwo
+sudo pacman -S lazygit
+cd archqtiledotfiles
+cl
+cd
+: 1762913113:0;cd archqtiledotfiles
+: 1762913121:0;git status
